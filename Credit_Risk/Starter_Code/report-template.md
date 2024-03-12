@@ -1,27 +1,45 @@
-# Module 12 Report Template
+# Module 20 Report Template
 
 ## Overview of the Analysis
 
-In this section, describe the analysis you completed for the machine learning models used in this Challenge. This might include:
+This project will take a look at lending companies. In order for their business to become successful they will need to know that they will be able to either return the asset or get the repayment back. Credit risk analysis is a good way for companies to make a more informed decision in these types of matters.
 
-* Explain the purpose of the analysis.
-* Explain what financial information the data was on, and what you needed to predict.
-* Provide basic information about the variables you were trying to predict (e.g., `value_counts`).
-* Describe the stages of the machine learning process you went through as part of this analysis.
-* Briefly touch on any methods you used (e.g., `LogisticRegression`, or any other algorithms).
+Using a machine learning model, I will try to determine which loans are healthy loan `0` and  high-risk loan `1` based on the loan status provided by the lending company, as well as if there are any false healthy loans (false positives) as well as false high-risk loan (false negatives).
+
+First we will split the data into training and testing sets. Then we will create a logistic regression model with the original data. We will use the function of LogisticRegression (creating the logistic regression model), confusion_matrix (Compute confusion matrix to evaluate the accuracy of a classification.), and train_test_split (Split arrays or matrices into random train and test subsets.) and display the data with classification_report (Build a text report showing the main classification metrics).
+
+
 
 ## Results
 
-Using bulleted lists, describe the accuracy scores and the precision and recall scores of all machine learning models.
+Results from the Machine Learning Model:
 
-* Machine Learning Model 1:
-    * Description of Model 1 Accuracy, Precision, and Recall scores.
+
+
+
+
+
+
+
+
+
+
+We can see that The Logistic Regression model predicted healthy loans 100% of the time and predicted non-healthy loans 84% of the time.
+
+According this models recall scores, the model made 1% of mistakes when predicting healthy loans and made 9% of mistakes when predicted non-healthy loans.
+
 
 ## Summary
 
-Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. For example:
+Model fitted from the original data:
 
-* Which one seems to perform best? How do you know it performs best?
-* Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
 
-If you do not recommend any of the models, please justify your reasoning.
+
+
+563 correctly classified high-risk loans. 56 false negative, meaning the actual value is healthy and the predicted value is non-healthy. 
+
+18663 correctly classified healthy loans. 102 false positive meaning the actual value is non-healthy and the predicted value is healthy.
+
+If this were me, I would be fine with using this model. This is because I would rather a loan be marked as high risk and actually be a  healthy loan as there would shouldn't be much monetary loss since they should have been marked as a healthy loan to begin with. Since the healthy loans got a 99% accuracy, even though there were more of these than false high-risk loans, the accuracy is very high. 
+
+With all of this I would still want to try and find another model that had a higher percentage than 91% for the recall score on the high-risk loans.
