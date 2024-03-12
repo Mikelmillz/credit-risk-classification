@@ -14,14 +14,7 @@ First we will split the data into training and testing sets. Then we will create
 
 Results from the Machine Learning Model:
 
-
-
-
-
-
-
-
-
+![image](https://github.com/Mikelmillz/credit-risk-classification/assets/145722846/1bf307ec-6219-4e61-86bb-d55824a7ce52)
 
 
 We can see that The Logistic Regression model predicted healthy loans 100% of the time and predicted non-healthy loans 84% of the time.
@@ -33,8 +26,7 @@ According this models recall scores, the model made 1% of mistakes when predicti
 
 Model fitted from the original data:
 
-
-
+![image](https://github.com/Mikelmillz/credit-risk-classification/assets/145722846/9137bd71-0edf-4fa5-b50f-bbc520243f32)
 
 563 correctly classified high-risk loans. 56 false negative, meaning the actual value is healthy and the predicted value is non-healthy. 
 
